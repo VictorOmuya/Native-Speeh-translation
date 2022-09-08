@@ -1,0 +1,12 @@
+flask
+datetime
+pandas
+SpeechRecognition
+googletrans==3.1.0a0
+gtts
+playsound==1.2.2
+tablib
+pyttsx3
+comtypes
+mysqlclient
+flask_mysqldb

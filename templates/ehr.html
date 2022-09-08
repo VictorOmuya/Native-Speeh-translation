@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MEDICAL RECORDS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+
+<body>
+
+<nav class="navtop" style="background-color: #11151b;">
+    <div>
+        <h1
+            style="color: darksalmon; font-size: larger; font-weight:900; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            medAI</h1>
+        <a href="{{ url_for('admin') }}"><i class="fas fa-home"></i>Home</a>
+        <a href="{{ url_for('search') }}"><i class=""></i>Go to Search</a>
+        <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    </div>
+</nav>
+
+
+
+    <div class="register">
+        <h1>Enter Medical Records</h1>
+       
+        <form action="{{ url_for('ehr') }}" method="post" autocomplete="off">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Name" id="username" required>
+           
+            <label for="age">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="age" placeholder="Age" id="username" required>
+            
+            <label for="med">
+                <i class="fas fa-hospital"></i>
+            </label>
+            <input type="text" name="med" placeholder="Medical Condition" id="username" required>
+
+            <label for="date">
+                <i class="fas fa-hospital"></i>
+            </label>
+            <input type="text" name="drug" placeholder="Drug Prescription" id="username" required>
+            <br/>
+            
+            <label for="date">
+                <i class="fas fa-calendar"></i>
+            </label>
+            <input type="text" name="date" placeholder="yyyy-mm-dd" id="username" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Enter">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<div class="login" style="margin-top: 6%; margin-left: 12%;">
+
+        <textarea name="text" rows="6" cols="99" style="border-radius: 5px;">{{ result }}</textarea>
+ 
+
+    <form action="/yor" method="POST">
+
+        <div class="login2">
+            <a style="text-decoration:solid; color: rgb(12, 112, 104); font-size: 14px; padding-left: 25px;"> FROM</a>
+            <select name="sourc">
+                <option value="Yoruba">Yoruba</option>
+                <option value="English">English</option>
+                <option value="Igbo">Igbo</option>
+                <option value="Hausa">Hausa</option>
+            </select>
+
+            <a style="text-decoration: solid; color: rgb(150, 182, 179); font-size: 14px; padding-left: 40px;"> TO </a>
+
+            <select name="destination">
+                <option value="English">English</option>
+                <option value="Yoruba">Yoruba</option>
+                <option value="Igbo">Igbo</option>
+                <option value="Hausa">Hausa</option>
+            </select>
+        </div>
+
+        <table>
+
+            <tr>
+                <textarea name="text" rows="6" cols="95"
+                    style="border-radius: 5px; padding-left: 30px;">Enter Text for translation: {{ request.form['text'] }}</textarea>
+            </tr>
+            <tr>
+                <input type="submit" value="Translate">
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}
